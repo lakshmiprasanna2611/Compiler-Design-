@@ -1,0 +1,28 @@
+%{  
+int flag = 0;  
+%}  
+%%  
+[aeiouAEIOU].[a-zA-Z0-9.]+ flag=1;  
+[a-zA-Z0-9]+  
+%%  
+int yywrap()
+{}
+int main()  
+{  
+yylex();  
+if (flag == 1)  
+ printf(" Not Accepted");  
+else 
+ printf(" Accepted");  
+}
+/*output
+C:\Users\vamsi>set path=C:\GnuWin32\bin
+
+C:\Users\vamsi>flex vowels.l.txt
+
+C:\Users\vamsi>set path=C:\MinGW\bin
+
+C:\Users\vamsi>gcc lex.yy.c
+
+C:\Users\vamsi>a
+hi Accepted
