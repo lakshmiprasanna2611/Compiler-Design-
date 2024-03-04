@@ -10,3 +10,37 @@ int main()
 { 
  yylex(); 
 } 
+/*output
+C:\Users\vamsi>set path=C:\GnuWin32\bin
+
+C:\Users\vamsi>flex key,id.l.txt
+
+C:\Users\vamsi>set path=C:\MinGW\bin
+
+C:\Users\vamsi>gcc lex.yy.c
+
+C:\Users\vamsi>a
+#include<stdio.h>
+#
+include is IDENTIFIER<
+stdio is IDENTIFIER.
+h is IDENTIFIER>
+void main()
+
+void is IDENTIFIER
+main is IDENTIFIER()
+{
+{
+int a,b,c = 30;
+
+int is a KEYWORD
+a is IDENTIFIER,
+b is IDENTIFIER,
+c is IDENTIFIER =
+30 is IDENTIFIER;
+printf("hello");
+
+printf is IDENTIFIER("
+hello is IDENTIFIER");
+}
+}
