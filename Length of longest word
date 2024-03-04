@@ -1,0 +1,26 @@
+/*lex code to find the length of the longest word*/ 
+%{
+int counter = 0;   
+%} 
+
+%%
+[a-zA-Z]+ {if (yyleng > counter)counter = yyleng;}  
+%%  
+int yywrap()
+{}
+int main() {   
+printf("largest: %d", counter);  
+printf("\n"); 
+yylex();  
+}
+/*output
+C:\Users\vamsi>set path=C:\GnuWin32\bin
+
+C:\Users\vamsi>flex len_wor.l.txt
+
+C:\Users\vamsi>set path=C:\MinGW\bin
+
+C:\Users\vamsi>gcc lex.yy.c
+
+C:\Users\vamsi>a
+largest: 0
