@@ -11,3 +11,14 @@ yyin=fopen("simple.txt","r");
 yyout=fopen("out.txt","w");
 yylex();
 }
+/*1:qwerty
+
+2:ertyui
+
+3:dfghjk
+
+4:rtyhvcdrty
+
+5:dfgjhk
+
+6:sfghj*/
