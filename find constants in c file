@@ -1,0 +1,37 @@
+digit [0-9]
+%{
+int cons=0;
+%}pq;a
+%%
+{digit}+ { cons++; printf("%s is a constant\n", yytext);  }
+.|\n { }
+%%
+int yywrap(void) {
+return 1; }
+int main(void)
+{
+FILE *f;
+char file[10];
+printf("Enter File Name : ");
+scanf("%s",file);
+f = fopen(file,"r");
+yyin = f;
+yylex();
+printf("Number of Constants : %d\n", cons);
+fclose(yyin);  
+}
+/*C:\Users\vamsi>set path=C:\GnuWin32\bin
+
+C:\Users\vamsi>flex count_consonents.l.txt
+
+C:\Users\vamsi>set path=C:\MinGW\bin
+
+C:\Users\vamsi>gcc lex.yy.c
+
+C:\Users\vamsi>a
+Enter File Name : constants.c
+3 is a constant
+14 is a constant
+30 is a constant
+Number of Constants : 3
+*/
