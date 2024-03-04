@@ -14,3 +14,19 @@ yylex();
 printf("\n no of vowels ::%d \n",vcount); 
 printf("\n no of consonants ::%d \n",ccount); 
 }
+/*output
+C:\Users\vamsi>set path=C:\GnuWin32\bin
+
+C:\Users\vamsi>flex vo,con.l.txt
+
+C:\Users\vamsi>set path=C:\MinGW\bin
+
+C:\Users\vamsi>gcc lex.yy.c
+
+C:\Users\vamsi>a
+enter the string with vowels and consonants:hihello
+
+
+ no of vowels ::3
+
+ no of consonants ::4
