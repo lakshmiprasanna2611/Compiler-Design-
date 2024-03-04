@@ -17,3 +17,37 @@ int main()
 { 
 yylex(); 
 } 
+/*output
+C:\Users\vamsi>a
+#include<stdio.h>
+#Identifier: include
+<Identifier: stdio
+
+. is a Punctuation CharsIdentifier: h
+>
+void main()
+
+void is a Keyword
+main is a Keyword
+() is a mathematical operator
+{
+{
+int a,b,c = 30;
+
+int is a Keyword Identifier: a
+
+, is a Punctuation CharsIdentifier: b
+
+, is a Punctuation CharsIdentifier: c
+ =
+30 is a numbers
+; is a Punctuation Chars
+printf("hello");
+
+printf is a Keyword
+( is a mathematical operator
+"hello" is a string
+) is a mathematical operator
+; is a Punctuation Chars
+}
+}
